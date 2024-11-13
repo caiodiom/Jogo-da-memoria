@@ -32,6 +32,12 @@ for(let i=0; i < emojis.length; i++)
 
 }
 
+function playSound(audioName) {
+    let audio = new Audio(`./src/audios/${audioName}.m4a`);
+    audio.volume = 0.2;
+    audio.play();
+  }
+
 function handleClick(){
     if(openCards.length < 2) {
         this.classList.add("boxOpen");
@@ -48,11 +54,17 @@ function checkMatch(){
 
 
     if(openCards[0].innerHTML === openCards[1].innerHTML){
+        setTimeout(() => {
         openCards[0].classList.add("boxMatch");
         openCards[1].classList.add("boxMatch");
+        playSound("hit");
+        }, 500)
     }else{
+        setTimeout(() => {
         openCards[0].classList .remove("boxOpen");
         openCards[1].classList .remove("boxOpen");
+        playSound("error2");
+        }, 500)
     }
 
     openCards = [];
