@@ -1,3 +1,4 @@
+/* Corpo e fundo */
 body {
     display: flex;
     justify-content: center;
@@ -7,7 +8,9 @@ body {
     user-select: none;
 }
 
+/* Container principal */
 .container {
+    border-radius: 20px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -25,6 +28,7 @@ body {
     padding: 40px 60px;
 }
 
+/* Título */
 h2 {
     font-size: 3em;
     color: #e7e5eb;
@@ -33,6 +37,7 @@ h2 {
     letter-spacing: 0.1em;
 }
 
+/* Botão de reset */
 .reset {
     border-radius: 3px;
     padding: 15px 20px;
@@ -48,10 +53,11 @@ h2 {
 }
 
 .reset:focus {
-    color: #00ffff; /* Light blue */
-    background: #000080; /* Dark blue */
+    color: #00ffff; 
+    background: #000080; 
 }
 
+/* Container do jogo */
 .game {
     width: 430px;
     height: 430px;
@@ -62,6 +68,7 @@ h2 {
     perspective: 500px;
 }
 
+/* Itens do jogo */
 .item {
     border-radius: 10px;
     cursor: grab;
@@ -76,7 +83,8 @@ h2 {
     transform: rotateY(180deg);
     transition: 0.25s;
 }
-.item:active{
+
+.item:active {
     cursor: grabbing;
 }
 
@@ -100,80 +108,27 @@ h2 {
     transform: rotateY(180deg);
 }
 
-@media screen and (max-width: 312px){
-    .game{        
+/* Ajustes para telas pequenas (até 312px) */
+@media screen and (max-width: 490px) {
+   
+    .container {
+        height: 500px;
+        width: 339px;
+    }
+    .game {  
+      
         width: 312px;
         height: 312px;
         gap: 2px;
     }
-    .item{
+    .item {
         width: 76px;
         height: 76px;
         font-size: 40px;
     }
-    h2{
+    h2 {
         font-size: 1.5rem;
         letter-spacing: 0;
     }
 }
 
-@media screen and (max-width: 320px){
-    .game{        
-        width: 320px;
-        height: 320px;
-        gap: 4px;
-        
-    }
-    .item{
-        width: 77px;
-        height: 77px;
-        font-size: 40px;
-    }
-    h2{
-        font-size: 1.5rem;
-        letter-spacing: 0;
-    }
-}
-
-@media screen and (max-width: 360px) {
-    .container{
-        width: 100%;   
-        margin-top: 2px;   
-    }
-
-    .game{        
-        width: 345px;
-        height: 345px;
-        gap: 3px;
-
-    }
-
-    .item{
-        width: 83px;
-        height: 83px;
-        font-size: 40px;
-    }
-
-    h2{
-        font-size: 2rem;
-        letter-spacing: 0;
-    }
-}
-
-@media screen and (max-width: 400px){
-    .game{        
-        width: 320px;
-        height: 320px;
-        gap: 4px;
-        
-    }
-    .item{
-        width: 77px;
-        height: 77px;
-        font-size: 40px;
-    }
-    h2{
-        font-size: 1.5rem;
-        letter-spacing: 0;
-    }
-}
