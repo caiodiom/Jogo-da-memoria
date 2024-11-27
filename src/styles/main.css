@@ -42,19 +42,30 @@ h2 {
     border-radius: 3px;
     padding: 15px 20px;
     width: 100%;
-    color: #000;
-    background-color: #fff;
     border: none;
     font-size: 1.5em;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     cursor: pointer;
     font-weight: 600;
+    background-color: #6392f8;
+    
+    color: #0000ff;
 }
 
-.reset:focus {
-    color: #00ffff; 
-    background: #000080; 
+.reset:hover{
+    background: linear-gradient(
+        325deg,
+        #000080 0%, /* Dark blue */
+        #0000ff 30%, /* Blue */
+        #00ffff 70%, /* Light blue */
+        #ffffff 100% /* White */
+       
+    );
+    color: #ffffff;
+    transform: rotate(2deg);
+    transition: 0.3s ease;
+    
 }
 
 /* Container do jogo */
@@ -108,7 +119,34 @@ h2 {
     transform: rotateY(180deg);
 }
 
+
+
+
+
 /* Ajustes para telas pequenas (até 312px) */
+
+@media screen and (max-width: 932px) {
+
+
+    .item {
+        
+        width: 57px;
+        height: 57px;
+        font-size: 40px;
+    }
+
+    .game {  
+       
+        width: 472px;
+        height: 130px;
+        gap: 2px;
+    }
+
+
+}
+
+
+
 @media screen and (max-width: 490px) {
    
     .container {
@@ -131,4 +169,5 @@ h2 {
         letter-spacing: 0;
     }
 }
+
 

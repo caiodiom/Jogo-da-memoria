@@ -36,16 +36,19 @@ function playSound(audioName) {
     let audio = new Audio(`./src/audios/${audioName}.m4a`);
     audio.volume = 0.2;
     audio.play();
-  }
+}
 
 function handleClick(){
     if(openCards.length < 2) {
         this.classList.add("boxOpen");
         openCards.push(this);
+       
     }
 
     if (openCards.length == 2) {
         setTimeout(checkMatch, 500);
+       
+       
     }
 };
 
@@ -58,12 +61,19 @@ function checkMatch(){
         openCards[0].classList.add("boxMatch");
         openCards[1].classList.add("boxMatch");
         playSound("hit");
+     
+       
         
     }else{
         
         openCards[0].classList .remove("boxOpen");
         openCards[1].classList .remove("boxOpen");
-        playSound("error2");
+        setTimeout(function() {
+            playSound("error2");
+        }, -5000);
+        
+        
+        
       
     }
 
