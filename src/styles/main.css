@@ -70,8 +70,8 @@ h2 {
 
 /* Container do jogo */
 .game {
-    width: 430px;
-    height: 430px;
+    width: 350px;
+    height: 330px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -84,8 +84,8 @@ h2 {
     border-radius: 10px;
     cursor: grab;
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -130,16 +130,20 @@ h2 {
 
     .item {
         
-        width: 57px;
+        width: 50px;
         height: 57px;
         font-size: 40px;
     }
 
     .game {  
        
-        width: 472px;
+        width: 420px;
         height: 130px;
         gap: 2px;
+    }
+
+    .reset {
+        width: 150px;
     }
 
 

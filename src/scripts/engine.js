@@ -68,12 +68,7 @@ function checkMatch(){
         
         openCards[0].classList .remove("boxOpen");
         openCards[1].classList .remove("boxOpen");
-        setTimeout(function() {
-            playSound("error2");
-        }, -5000);
-        
-        
-        
+        playSound("error2");
       
     }
 
