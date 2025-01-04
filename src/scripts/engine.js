@@ -39,16 +39,13 @@ function playSound(audioName) {
 }
 
 function handleClick(){
-    if(openCards.length < 2) {
+    if(openCards.length < 2 && !openCards.includes(this)) {
         this.classList.add("boxOpen");
         openCards.push(this);
-       
     }
 
     if (openCards.length == 2) {
         setTimeout(checkMatch, 500);
-       
-       
     }
 };
 
